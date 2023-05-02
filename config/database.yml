@@ -24,15 +24,15 @@ default: &default
 development:
   <<: *default
   database: demo_development
-
+  host: localhost
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: demosdvsdv
+  username: postgres
 
   # The password associated with the postgres role (username).
-  #password:
+  password: qzpmwxonsk
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -82,5 +82,6 @@ test:
 production:
   <<: *default
   database: demo_production
-  username: demo
-  password: <%= ENV["DEMO_DATABASE_PASSWORD"] %>
+  host: localhost
+  username: postgres
+  password: qzpmwxonsk
